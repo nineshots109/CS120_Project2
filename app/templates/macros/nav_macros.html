@@ -19,16 +19,22 @@
    render_menu_items.
 #}
 
+
 {% macro menu_items(current_user) %}
     {% set endpoints = [
       ('main.about', 'About', 'info')
     ]%}
     {% set user = [] %}
     {% if current_user.is_authenticated %}
+      {# Commented out for now
       {% set user = ([(current_user.role.index + '.index', current_user.role.name + ' Dashboard', 'user')]) %}
+      #}
     {% endif %} 
-    {{ render_menu_items( endpoints +  user ) }}
+    {{ render_menu_items(endpoints + user) }}
 {% endmacro %}
+
+
+
 
 {% macro header_items(current_user) %}
        {% set endpoints = [

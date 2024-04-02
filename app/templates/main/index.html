@@ -1,17 +1,96 @@
+{% import 'macros/page_macros.html' as page %}
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-    <div class="ui text container">
-      <h1>Hello {% if not (current_user.is_authenticated) %} world {% else %} {{ current_user.full_name() }} {% endif %},</h1>
 
-        <p>This is <a href="http://hack4impact.org">Hack4Impact</a>'s web application template. We'll use this as a
-        foundation for each of our <a href="http://flask.pocoo.org">Flask</a> projects. The goal is to reduce the work
-        necessary to get a new project off the ground, by providing boilerplate code (such as account management
-        facilities), as well as uncontroversial and extensible defaults. We have integrated an
-        <a href="http://sass-lang.com">SCSS</a>-based asset pipeline based around a (fantastic!) framework
-        called <a href="http://semantic-ui.com">Semantic UI</a>. Much of this code is appropriated from the examples
-        in Miguel Grinberg's book, <a href="http://flaskbook.com"><em>Flask Web Development</em></a>.</p>
+<!DOCTYPE html>
+<html lang="en">
 
-        <p>{{ lipsum(6) }}</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+      
+
+        .recipe-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .recipe-image {
+            width: 25%;
+            border-radius: 5px;
+        }
+
+        .recipe-details {
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .category {
+            font-style: italic;
+            color: #888;
+        }
+
+        .steps {
+            margin-top: 20px;
+        }
+
+        .step {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Recipe Portal for CS120!</h1>
+        <p>Explore delicious recipes from our collection:</p>
+
+        <div class="recipe-card">
+            <img class="recipe-image" src="https://s23209.pcdn.co/wp-content/uploads/2014/03/IMG_2622edit.jpg" alt="Recipe 1">
+            <div class="recipe-details">
+                <h2>Spaghetti Carbonara</h2>
+                <p class="category">Pasta</p>
+                <p>A classic Italian pasta dish with bacon, eggs, and Parmesan cheese.</p>
+                <p><strong>Preparation Time:</strong> 20 minutes</p>
+                <p><strong>Servings:</strong> 4</p>
+                <div class="steps">
+                    <h3>Steps:</h3>
+                    <ol>
+                        <li class="step">Boil water in a large pot and cook spaghetti according to package instructions.</li>
+                        <li class="step">In a skillet, cook bacon until crispy. Remove bacon and drain excess fat, leaving about 2 tablespoons in the skillet.</li>
+                        <li class="step">In a bowl, whisk together eggs and Parmesan cheese.</li>
+                        <li class="step">Add cooked spaghetti to the skillet with bacon fat, toss to coat, then remove from heat.</li>
+                        <li class="step">Pour egg mixture over the spaghetti and quickly toss to combine. The heat from the pasta will cook the eggs and create a creamy sauce.</li>
+                        <li class="step">Crumble cooked bacon and sprinkle over the top. Serve immediately.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more recipe cards similarly -->
+
     </div>
+</body>
+
+</html>
+
 {% endblock %}

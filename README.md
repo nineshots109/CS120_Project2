@@ -4,8 +4,8 @@ To run the application locally, follow these steps:
 
 1. Clone the repository to your local machine:
 
-$ git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
-$ cd REPO_NAME
+$ git clone https://github.com/nineshots109/CS120_Project2.git
+$ cd CS120_Project2
 
 
 2. Initialize a virtual environment:

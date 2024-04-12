@@ -26,6 +26,8 @@ bad_Procfile.txt
 bad_docker-compose.yml
 bad_docs
 bad_readme_media
+git-secrets
+
 
 
 

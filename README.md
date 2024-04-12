@@ -19,6 +19,17 @@ $ cd CS120_Project2
   $ python3 -m venv venv
   $ source venv/bin/activate
   ```
+Then you have to Add Environment Variables
+Create a file called config.env that contains environment variables. Very important: do not include the config.env file in any commits. This should remain private. You will manually maintain this file locally, and keep it in sync on your host.
+
+Variables declared in file have the following format: ENVIRONMENT_VARIABLE=value. You may also wrap values in double quotes like ENVIRONMENT_VARIABLE="value with spaces".
+
+In order for Flask to run, there must be a SECRET_KEY variable declared. Generating one is simple with Python 3:
+
+$ python3 -c "import secrets; print(secrets.token_hex(16))"
+This will give you a 32-character string. Copy this string and add it to your config.env:
+
+SECRET_KEY=Generated_Random_String
 
 3. Install the dependencies:
 $ pip install -r requirements.txt

@@ -36,19 +36,17 @@ $ pip install -r requirements.txt
 
 
 4. Install other necessary dependencies:
-- Sass:
-  ```
+
+   Before that, type "sudo apt-get update"
+
+For Sass:
+
   $ gem install sass
-  ```
-- Redis:
-  - Mac:
-    ```
-    $ brew install redis
-    ```
-  - Linux:
-    ```
-    $ sudo apt-get install redis-server
-    ```
+
+Then Redis:
+  - Mac: $ brew install redis
+  - Linux: $ sudo apt-get install redis-server
+  
 
 5. Create the database:
 $ python manage.py recreate_db

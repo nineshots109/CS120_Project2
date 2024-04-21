@@ -52,9 +52,10 @@ $ python manage.py recreate_db
 
 6. Run the app:
 $ source venv/bin/activate
+
 $ honcho start -e config.env -f Local
 
 
-7. Open your web browser and navigate to [http://localhost:5000](http://localhost:5000) to view the application.
+8. Open your web browser and navigate to [http://localhost:5000](http://localhost:5000) to view the application.
 
 Enjoy the food recipes with Spoonacular API
